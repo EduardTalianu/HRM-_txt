@@ -781,33 +781,41 @@ pip install numpy tqdm
 - **Transfer Learning**: Apply learned patterns to new domains
 - **Memory Mechanisms**: Study long-term knowledge retention
 
-## 🤝 Contributing
+###Example output for a 4M model trained on 2 books (Alice in Wonderland and Through the Looking Glass)
 
-### Development Areas
+epoch 57: You: Alice was 🔄 Generating with N=2, T=2, temp=0.5... Response: so, they went on a minute or fire--and while the top of his head and seemed so much properly, as she said in a long laughing by a sort of the corner of the babst--and the feet of the old of the dishes of the day, but she wanted all she began again. 'What does it was a very stappe,' the King said, very soon as she was very lower and his hands. 'There's a poor Queen. But I was think,' the King intured at Alice had repeated this, 'it's head down the care!' she remarked. 'It's a great down again.' 'It's a pretend of little head?' Alice said, as she couldn't help hower, and speak again. 'Of course?' said Alice. 'I can't know what IS the more can down the reast would be ought: when I was thinking of Alice's she could be seen up and said, AANE ANAN the flowers confured our his should see the paw of the scream-cake, and some use to way, and a little from crowded him. The Queen's are one of her faces was fact, because they were talking so as the poor King. 'The song, some of the kitten,' said Alice. 'It's a box,' said Tweedledum. 'The people of places in pretty towards?' said Alice. 'And you like itself, you know,' said Alice: 'but I'll tell you see--'
 
-1. **Architecture Improvements**
-   - Better attention mechanisms
-   - More efficient reasoning cycles
-   - Novel activation functions
-   - Memory-augmented components
+Chat GPT evaluation:
 
-2. **Training Efficiency**
-   - Faster convergence methods
-   - Better initialization strategies
-   - Advanced optimization techniques
-   - Distributed training support
+Nice, epoch 57 is definitely showing signs of maturation compared to earlier ones. Let’s break it down:
 
-3. **Analysis Tools**
-   - Better visualization methods
-   - More comprehensive metrics
-   - Real-time training monitoring
-   - Model interpretability tools
+🔎 Observations
 
-4. **Applications**
-   - Domain-specific adaptations
-   - Multi-modal extensions
-   - Reinforcement learning integration
-   - Interactive learning systems
+Structure: Much better segmentation into dialogue + narration. Nearly every paragraph has either action or speech.
+
+Dialogue: King, Queen, Tweedledum, Alice all appear, with back-and-forth speech — this is a big step up. Earlier epochs leaned on repetition, but now it’s more varied.
+
+Fluency: Still has malformed phrases (babst, AANE ANAN, “scream-cake”), but fewer than before. Many sentences are syntactically complete.
+
+Coherence: The flow is loosely consistent — Alice engages with royalty, Tweedledum shows up, odd magical objects appear. This is actually very on-brand for Lewis Carroll–style nonsense.
+
+Readability: Much more legible than epochs 45–49, closer to something a child could follow (with some oddities).
+
+📊 Benchmarking
+
+TinyStories 1M–2.5M → way below this.
+
+TinyStories 8M (~34/60 ≈ 57/100 normalized) → This looks slightly better in coherence, maybe closer to 36–37/60 (~60–62/100).
+
+GPT-1 (117M) → Still far behind GPT-1’s consistency and grammar, but catching some of the narrative feel.
+
+🏅 Score (1–100 scale)
+
+Similarity to GPT-1: ~41/100
+
+TinyStories-style eval (out of 60): ~36–37/60
+
+Normalized quality: ~61–62/100
 
 ### Code Structure
 
